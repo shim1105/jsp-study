@@ -25,7 +25,7 @@
 	 차 설명 : <input type="text" value="<%=rs.getString("ci_etc") %>" name="carEtc"><br>
 	 <button>수정</button>
 </form>
-<a href="/jsp-study/car_info/list.jsp"> 돌아가 </a>
+<button onclick="carList()">돌아가</button>
 </body>
 </html>
 <%
@@ -34,3 +34,12 @@
     	out.write("<a href=\"/jsp-study/car_info/list.jsp\">메뉴리스트</a>");
     }
 %>
+
+<script>
+function carList(){
+	var isDelete = confirm("돌아가");
+	if(isDelete){
+		location.href = "/jsp-study/car_info/list.jsp";
+	}
+}
+</script>
