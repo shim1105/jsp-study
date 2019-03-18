@@ -25,7 +25,7 @@
 		아이디 : <input type="text" name="ui_id" value="<%=rs.getString("ui_id") %>"><br>
 		나이 : <input type="text" name="ui_age" value="<%=rs.getString("ui_age") %>"><br>
 		비고 : <textarea name="ui_etc"><%=rs.getString("ui_etc")%></textarea><br>
-		<button>유저수정</button>	
+		<button >유저수정</button>	
 		<button type="button" onclick="deleteUser()">삭제</button>
 		<input type="hidden" name="ui_num" value =<%=rs.getString("ui_num") %>>
 		<!-- 어디 있어도 상관없음 ., -->
@@ -40,8 +40,8 @@
 <script >
 	function deleteUser(uiNum){
 		alert("삭제버튼을 클릭 햇순 ..!!");
-		document.getElementById("userForm").action="/jsp-study/user_info/delete_ok.jsp"
-		document.getElementById("userForm").submit();
+		document.getElementById("userform").action="/jsp-study/user_info/delete_ok.jsp"
+		document.getElementById("userform").submit();
 
 	}
 </script>

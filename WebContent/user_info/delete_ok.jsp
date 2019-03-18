@@ -4,7 +4,7 @@
     pageEncoding="UTF-8"%>
 <%
 	String uiNum=request.getParameter("ui_num");
-	String sql= " delete fron user_info where ui_num=?";
+	String sql= " delete from user_info where ui_num=?";
 	PreparedStatement ps = DBCon.getCon().prepareStatement(sql);
 	ps.setString(1,uiNum);
 	int cnt= ps.executeUpdate();
